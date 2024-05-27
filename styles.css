@@ -57,12 +57,17 @@ footer {
 
 /* Стили для видео */
 .video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px; /* Отступ сверху для опускания видео вниз */
+    position: relative;
+    width: 60%;
+    padding-bottom: 35%; /* 16:9 соотношение сторон */
+    height: 0;
+    overflow: hidden;
 }
 
 .video-container iframe {
-    max-width: 100%;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
