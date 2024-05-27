@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Велотуризм</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Велотуризм</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showTab('home')">Главная</a>
+        <a href="#" onclick="showTab('contacts')">Контакты</a>
+    </nav>
+    <div id="home" class="content active">
+        <h2>Добро пожаловать на сайт велотуризма!</h2>
+        <p>Мы предлагаем уникальные велопоездки по живописным местам в вашем регионе.</p>
+        <p>Присоединяйтесь к нам и наслаждайтесь красотами природы, путешествуя на велосипеде!</p>
+        
+        <!-- Встроенное видео -->
+        <div class="video-container">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/WPdDBmyTHe4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="contacts" class="content">
+        <h2>Контактная информация</h2>
+        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+        <p>Email: info@velotourism.com</p>
+        <p>Адрес: ул. Буденовский, д. 456, г. Ростов-на-Дону, Россия</p>
+    </div>
+    <footer>
+        <p style="margin: 0;">Сайт-визитка &copy; 2024</p>
+    </footer>
+    <script>
+        function showTab(tabName) {
+            var content = document.getElementsByClassName("content");
+            for (var i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+        }
+
+        window.onload = function() {
+            showTab('home');
+        };
+    </script>
+</body>
+</html>
